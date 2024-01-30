@@ -85,7 +85,7 @@ btn1.addEventListener('click', function () {
 
 btn2.addEventListener('click', function () {
     console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Regarder derrière le tableau !<br>', num3, btn2, false2, enigme2, '67');
+    openInfo('Regarder derrière le tableau !<br>', num4, btn2, false2, enigme2, '67');
 });
 
 btn3.addEventListener('click', function () {
@@ -95,10 +95,10 @@ btn3.addEventListener('click', function () {
 
 btn4.addEventListener('click', function () {
     console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Trouvez le bon ordi dans le bon sac !<br>', num2, btn4, false4, enigme4, '24');
+    openInfo('Trouvez le bon ordi dans le bon sac !<br>', num2, btn4, false4, enigme4, '34');
 });
 
 btn5.addEventListener('click', function () {
     console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Regardez bien toute la table !<br>', num4, btn5, false5, enigme5, '78');
+    openInfo('Regardez bien toute la table !<br>', num3, btn5, false5, enigme5, '78');
 });
