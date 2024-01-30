@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .overlay {
@@ -13,7 +13,7 @@ body, html {
     height: 100%;
     background-color: black;
     opacity: 1; /* Ajustez l'opacité selon vos préférences */
-    z-index: 1;
+    z-index: 2;
 }
 
 .image-container {
@@ -23,10 +23,139 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: 0;
-    overflow: hidden;
 }
 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
+.false-btn div{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 0px;
+    border-radius: 100%;
+    background-color: rgba(255, 99, 71, 0.44);
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.btn1 {
+    top: 456px;
+    left: 1327px;
+}
+.btn2 {
+    top: 156px;
+    left: 510px;
+}
+.btn3 {
+    top: 110px;
+    left: 370px;
+}
+.btn4 {
+    top: 50%;
+    left: 50%;
+}
+.btn5 {
+    top: 481px;
+    left: 1090px;
+}
+
+/* boutons invisible supersposés aux boutons visibles */
+
+.invbuttons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+.invbuttons button {
+    background-color: transparent;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 0px;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+.invbuttons button:hover {
+    cursor: pointer;
+}
+.invbtn1 {
+    top: 456px;
+    left: 1327px;
+}
+.invbtn2 {
+    top: 156px;
+    left: 510px;
+}
+.invbtn3 {
+    top: 110px;
+    left: 370px;
+}
+.invbtn4 {
+    top: 50%;
+    left: 50%;
+}
+.invbtn5 {
+    top: 481px;
+    left: 1090px;
+}
+.info{
+    position: absolute;
+    padding: 50px 50px 50px 50px;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    display: none;
+}
+.exit {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: red;
+    border: 0px;
+    border-radius: 1px;
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.num{
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: auto;
+    border: 0px;
+    border-radius: 1px;
+    color: white;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+}
+.final{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    display: none;
+}
+
