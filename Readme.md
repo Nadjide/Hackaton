@@ -21,7 +21,7 @@ Au début, vous trouverez une page web sombre qui s'éclaircit sous votre curseu
    
    Trouvez un tableau sur le site affichant un chiffre binaire à convertir en décimal : 0100 0011. La solution est 67.
 
-4. **Énigme de la Boussole (13)**
+4. **Énigme de la Boussole**
    
    Trouvez l'endroit sur le site menant à un balcon. Utilisez une application de boussole pour aligner la flèche avec le pôle magnétique. Le degré indiqué révèle le chiffre 13.
 
@@ -31,4 +31,4 @@ Au début, vous trouverez une page web sombre qui s'éclaircit sous votre curseu
 
 6. **Le Labyrinthe de la Fin**
    
-   Une fois le numéro de téléphone composé, une personne vous guidera vers la sortie avec une énigme menant à un extincteur. Ce dernier contient des coordonnées et une instruction : "Lorsque tu traverses le seuil, suspend ton regard vers les étoiles, puis progresse de 6 ; 9." Référez-vous aux carreaux sur le plafond pour trouver un code suspendu. Ce code est la clé finale à inscrire sur le site pour réussir l'énigme et terminer cette aventure.
+   Une fois le numéro de téléphone composé, une personne vous guidera vers la sortie avec une énigme menant à un extincteur. Ce dernier contient des coordonnées et une instruction : "Une fois la porte franchie, contemple le ciel nocturne, puis avance de 6 ; 9 pour percer le mystère." Référez-vous aux carreaux sur le plafond pour trouver un code suspendu. Ce code est la clé finale à inscrire sur le site pour réussir l'énigme et terminer cette aventure.
