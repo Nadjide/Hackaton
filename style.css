@@ -12,7 +12,7 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 1; /* Ajustez l'opacité selon vos préférences */
+    opacity: 0; /* Ajustez l'opacité selon vos préférences */
     z-index: 2;
 }
 
@@ -40,24 +40,24 @@ img {
 }
 
 .btn1 {
-    top: 456px;
-    left: 1327px;
+    top: 66%;
+    left: 87%;
 }
 .btn2 {
-    top: 156px;
-    left: 510px;
+    top: 22%;
+    left: 33%;
 }
 .btn3 {
-    top: 110px;
-    left: 370px;
+    top: 17%;
+    left: 25%;
 }
 .btn4 {
     top: 50%;
     left: 50%;
 }
 .btn5 {
-    top: 481px;
-    left: 1090px;
+    top: 70%;
+    left: 71%;
 }
 
 /* boutons invisible supersposés aux boutons visibles */
@@ -83,24 +83,24 @@ img {
     cursor: pointer;
 }
 .invbtn1 {
-    top: 456px;
-    left: 1327px;
+    top: 66%;
+    left: 87%;
 }
 .invbtn2 {
-    top: 156px;
-    left: 510px;
+    top: 22%;
+    left: 33%;
 }
 .invbtn3 {
-    top: 110px;
-    left: 370px;
+    top: 17%;
+    left: 25%;
 }
 .invbtn4 {
     top: 50%;
     left: 50%;
 }
 .invbtn5 {
-    top: 481px;
-    left: 1090px;
+    top: 70%;
+    left: 71%;
 }
 .info{
     position: absolute;
