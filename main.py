@@ -55,7 +55,7 @@ def enigme_technologique():
     for _ in range(4):
         btn = tk.Button(root, text="", font=("Arial", 14), width=20, padx=10, pady=5, 
                         bg='#4E5D6C', fg='white', borderwidth=0, highlightthickness=0, 
-                        activebackground='#687A8F', activeforeground='white')
+                        activebackground='#687A8F', activeforeground='white', cursor='hand2')
         btn.pack(pady=10)
         btn.bind("<Enter>", on_enter)
         btn.bind("<Leave>", on_leave)
