@@ -27,7 +27,7 @@ def enigme_technologique():
 
         if reponses_correctes == len(questions):
             print("Bravo ! Votre quête ne s'arrête pas ici. "
-                  "Cherchez la clé cachée dans la mémoire local de la première page web ouverte. "
+                  "Cherchez la clé cachée dans la mémoire local web. "
                   "Votre recompense vous attend !")
         else:
             print("Certaines réponses sont incorrectes. Veuillez recommencer.")
