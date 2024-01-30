@@ -32,5 +32,4 @@ def enigme_technologique():
         else:
             print("Certaines réponses sont incorrectes. Veuillez recommencer.")
 
-# Appel de la fonction
 enigme_technologique()
