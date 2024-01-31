@@ -105,17 +105,17 @@ function openInfo(message, numToUpdate, btn, falseBtn, numpart, flag) {
     });
 
     submit.addEventListener('click', function () {
-        if (input.value === numpart) {
+        if (input.value.trim() === numpart) {
             numToUpdate.innerHTML = numpart;
             btn.style.display = 'none';
             falseBtn.style.display = 'none';
-            win();
             // Modifiez l'état du drapeau dans l'objet flags
             flags[flag] = true;
+            win();
             indice.innerHTML = '';
             closeInfo();
         } else {
-            openInfo('Mauvaise réponse !<br>', numToUpdate, btn, falseBtn, numpart, flag);
+            alert('Mauvaise réponse !');
         }
     });
 }
