@@ -115,7 +115,7 @@ function openInfo(message, numToUpdate, btn, falseBtn, numpart, flag) {
             indice.innerHTML = '';
             closeInfo();
         } else {
-            alert('Mauvaise réponse !');
+            openInfo('Mauvaise réponse !<br>', numToUpdate, btn, falseBtn, numpart, flag);
         }
     };
 
