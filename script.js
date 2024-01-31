@@ -1,4 +1,5 @@
 let open = false;
+let start = false;
 const overlay = document.querySelector('.overlay');
 const btn1 = document.querySelector('.invbtn1');
 const btn2 = document.querySelector('.invbtn2');
@@ -16,8 +17,39 @@ const num3 = document.querySelector('.num3');
 const num4 = document.querySelector('.num4');
 const num5 = document.querySelector('.num5');
 const info = document.querySelector('.info');
-const code = 'uncode';
+const code = 'etlalumierefut';
 var cpt = 0;
+
+var minutes = 15;
+var secondes = 0;
+var timer = document.getElementById('timer');
+var interval;
+
+function startTimer() {
+    startButton.style.display = 'none';
+    start = true;
+    interval = setInterval(function () {
+        if (secondes == 0) {
+            minutes--;
+            secondes = 59;
+        } else {
+            secondes--;
+        }
+        if (secondes < 10) {
+            timer.innerHTML = minutes + ':0' + secondes;
+        } else {
+            timer.innerHTML = minutes + ':' + secondes;
+        }
+        if (minutes == 0 && secondes == 0) {
+            clearInterval(interval);
+            timer.innerHTML = 'Temps écoulé !';
+        }
+    }, 1000);
+}
+
+// Call startTimer() when the start button is clicked
+const startButton = document.querySelector('.start');
+startButton.addEventListener('click', startTimer);
 function win() {
     if (cpt == 5) {
         const final = document.querySelector('.final');
@@ -39,14 +71,15 @@ function closeInfo() {
 }
 
 document.addEventListener('mousemove', function (e) {
-    if (!open) {
-        overlay.style.cursor = 'none';
+    if (!open && start) {
+        //je veux faire disparaitre le curseur
         overlay.style.background = `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, transparent 50px, #000 100px)`;
     }
 });
 function openInfo(message, numToUpdate, btn, falseBtn, numpart) {
     open = true;
     info.style.display = 'block';
+    info.style.cursor = 'default';
     const indice = document.querySelector('.ind');
     indice.innerHTML = message;
     const exit = document.querySelector('.exit');
