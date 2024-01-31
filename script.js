@@ -17,11 +17,6 @@ const num4 = document.querySelector('.num4');
 const num5 = document.querySelector('.num5');
 const info = document.querySelector('.info');
 const code = 'uncode';
-let enigme1 = false;
-let enigme2 = false;
-let enigme3 = false;
-let enigme4 = false;
-let enigme5 = false;
 var cpt = 0;
 function win() {
     if (cpt == 5) {
@@ -44,21 +39,22 @@ function closeInfo() {
 }
 
 document.addEventListener('mousemove', function (e) {
-    overlay.style.cursor = 'none';
     if (!open) {
+        overlay.style.cursor = 'none';
         overlay.style.background = `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, transparent 50px, #000 100px)`;
     }
 });
-
-function openInfo(message, numToUpdate, btn, falseBtn, enigmeFlag, numpart) {
+function openInfo(message, numToUpdate, btn, falseBtn, numpart) {
     open = true;
     info.style.display = 'block';
-    info.innerHTML = message + info.innerHTML;
+    const indice = document.querySelector('.ind');
+    indice.innerHTML = message;
     const exit = document.querySelector('.exit');
     const input = document.querySelector('.ipt');
     const submit = document.querySelector('.valid');
     
     exit.addEventListener('click', function (event) {
+        indice.innerHTML = '';
         closeInfo();
     });
 
@@ -67,38 +63,32 @@ function openInfo(message, numToUpdate, btn, falseBtn, enigmeFlag, numpart) {
             numToUpdate.innerHTML = numpart;
             btn.style.display = 'none';
             falseBtn.style.display = 'none';
-            enigmeFlag = true;
             cpt++;
-            console.log(cpt);
             win();
+            indice.innerHTML = '';
             closeInfo();
         } else {
-            openInfo('Mauvaise réponse !<br>', numToUpdate, btn, falseBtn, enigmeFlag, numpart);
+            openInfo('Mauvaise réponse !<br>', numToUpdate, btn, falseBtn, numpart);
         }
     });
 }
 
 btn1.addEventListener('click', function () {
-    console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Munissez-vous de votre boussole !<br>', num5, btn1, false1, enigme1, '13');
+    openInfo('Munissez-vous de votre boussole !<br>', num5, btn1, false1, '13');
 });
 
 btn2.addEventListener('click', function () {
-    console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Regarder derrière le tableau !<br>', num4, btn2, false2, enigme2, '67');
+    openInfo('Regarder derrière le tableau !<br>', num4, btn2, false2, '67');
 });
 
 btn3.addEventListener('click', function () {
-    console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Vous ne trouvez pas qu\'il fait chaud ?<br>', num1, btn3, false3, enigme3, '06');
+    openInfo('Vous ne trouvez pas qu\'il fait chaud ?<br>', num1, btn3, false3, '06');
 });
 
 btn4.addEventListener('click', function () {
-    console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Trouvez le bon ordi dans le bon sac !<br>', num2, btn4, false4, enigme4, '34');
+    openInfo('Trouvez le bon ordi dans le bon sac !<br>', num2, btn4, false4, '34');
 });
 
 btn5.addEventListener('click', function () {
-    console.log(enigme1 + ' ' + enigme2 + ' ' + enigme3 + ' ' + enigme4 + ' ' + enigme5);
-    openInfo('Regardez bien toute la table !<br>', num3, btn5, false5, enigme5, '78');
+    openInfo('Regardez bien toute la table !<br>', num3, btn5, false5, '78');
 });
