@@ -4,6 +4,7 @@ body, html {
     height: 100%;
     overflow-y: hidden;
     cursor: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .overlay {
@@ -176,7 +177,10 @@ img {
     height: 100%;
     z-index: 5;
     background-color: transparent;
+    color: white;
+    font-size: 30px;
     text-align: center;
     transform: translate(-50%, -50%);
+    border: none;
 }
 
