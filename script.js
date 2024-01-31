@@ -89,6 +89,8 @@ document.addEventListener('mousemove', function (e) {
     }
 });
 
+let currentSubmitListener = null;
+
 function openInfo(message, numToUpdate, btn, falseBtn, numpart, flag) {
     open = true;
     info.style.display = 'block';
@@ -99,17 +101,15 @@ function openInfo(message, numToUpdate, btn, falseBtn, numpart, flag) {
     const input = document.querySelector('.ipt');
     const submit = document.querySelector('.valid');
 
-    exit.addEventListener('click', function (event) {
-        indice.innerHTML = '';
-        closeInfo();
-    });
+    if (currentSubmitListener) {
+        submit.removeEventListener('click', currentSubmitListener);
+    }
 
-    submit.addEventListener('click', function () {
+    currentSubmitListener = function () {
         if (input.value.trim() === numpart) {
             numToUpdate.innerHTML = numpart;
             btn.style.display = 'none';
             falseBtn.style.display = 'none';
-            // Modifiez l'état du drapeau dans l'objet flags
             flags[flag] = true;
             win();
             indice.innerHTML = '';
@@ -117,6 +117,13 @@ function openInfo(message, numToUpdate, btn, falseBtn, numpart, flag) {
         } else {
             alert('Mauvaise réponse !');
         }
+    };
+
+    submit.addEventListener('click', currentSubmitListener);
+
+    exit.addEventListener('click', function (event) {
+        indice.innerHTML = '';
+        closeInfo();
     });
 }
 
